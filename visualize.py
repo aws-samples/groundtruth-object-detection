@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import matplotlib.colors as mcolors
+import argparse
 
 
 def visualize_bbox(img_file, yolo_ann_file, label_dict, figure_size=(6, 8)):
@@ -50,3 +51,22 @@ def visualize_bbox(img_file, yolo_ann_file, label_dict, figure_size=(6, 8)):
                 verticalalignment="top",
                 bbox=props,
             )
+        plt.show()
+
+
+def main():
+    """
+    Plots bounding boxes
+    """
+
+    labels = {0: "can", 1: "paper"}
+    parser = argparse.ArgumentParser()
+    parser.add_argument("img", help="image file")
+    args = parser.parse_args()
+    img_file = args.img
+    ann_file = img_file.split(".")[0] + ".txt"
+    visualize_bbox(img_file, ann_file, labels, figure_size=(6, 8))
+
+
+if __name__ == "__main__":
+    main()
