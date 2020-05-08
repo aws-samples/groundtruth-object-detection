@@ -51,7 +51,7 @@ def visualize_bbox(img_file, yolo_ann_file, label_dict, figure_size=(6, 8)):
                 verticalalignment="top",
                 bbox=props,
             )
-        plt.show()
+    plt.show()
 
 
 def main():
