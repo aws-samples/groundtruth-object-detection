@@ -1,6 +1,6 @@
 {
-    "s3_bucket":"data-labeling-ground-truth",
+    "s3_bucket":"ground-truth-data-labeling",
     "job_id":"bounding_box",
-    "ground_truth_job_name":"bbox-yolo",
+    "ground_truth_job_name":"yolo-bbox",
     "yolo_output_dir":"yolo_annot_files"
 }

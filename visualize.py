@@ -50,7 +50,7 @@ def visualize_bbox(img_file, yolo_ann_file, label_dict, figure_size=(6, 8)):
                 fontsize=14,
                 verticalalignment="top",
                 bbox=props,
-            )
+            ) 
     plt.show()
 
 
@@ -59,7 +59,7 @@ def main():
     Plots bounding boxes
     """
 
-    labels = {0: "can", 1: "paper"}
+    labels = {0: "pencil", 1: "pen"}
     parser = argparse.ArgumentParser()
     parser.add_argument("img", help="image file")
     args = parser.parse_args()
@@ -70,3 +70,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
